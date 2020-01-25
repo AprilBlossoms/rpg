@@ -1,0 +1,12 @@
+table.character {
+  width: 30vw;
+  border: 2px solid black;
+  margin-bottom: 4px;
+}
+.character th {
+  border-bottom: 1px solid black;
+  white-space: nowrap;
+}
+.character td:last-child:not(:only-child) {
+  text-align: right;
+}

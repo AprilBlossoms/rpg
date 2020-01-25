@@ -1,0 +1,41 @@
+#Container,
+.container {
+  width: 92vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.faceContainer {
+  text-align: center;
+}
+.faceContainer p {
+  font-size: 0.8em;
+  margin: 0 auto 8px auto;
+}
+
+#Players {
+  margin: 0;
+}
+#Players .character {
+  background: #c3ffda;
+}
+#Players .character.dead {
+  background: #dadada;
+}
+
+#Enemies {
+  margin: 0;
+}
+#Enemies .character {
+  background: #efdada;
+}
+
+#Log {
+  width: 90vw;
+  margin: 8px 0 0 0;
+  background: #cacaca;
+  border-radius: 4px;
+  padding: 1vw;
+}

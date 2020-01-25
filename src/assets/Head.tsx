@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface FaceProps {
+  hair?: string;
   fill?: string;
   stroke?: string;
   children: React.ReactNode;

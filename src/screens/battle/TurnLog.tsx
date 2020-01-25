@@ -13,7 +13,7 @@ export default function TurnLog({ log, currentTurn }: TurnLogProps) {
   }
   return (
     <div>
-      <p>{turn != null && turn.result.message}</p>
+      {turn?.result?.messages?.map(m => <p>{m}</p>)}
     </div>
   );
 }

@@ -1,8 +1,0 @@
-#Log {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-#Log:empty {
-  display: none;
-}

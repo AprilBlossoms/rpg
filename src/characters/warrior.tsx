@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PlayerCharacter, SpriteProps } from './types';
 import { targetLowestHp } from 'logic/targeting';
 import { sword, rush } from 'logic/actions';

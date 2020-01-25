@@ -1,6 +1,6 @@
 import { Character } from '../types';
 
-export default function targetLowestHp(targets: Character[]): Character | null {
+export default function targetLowestHp(targets: Character[]): Character {
   if (targets.length === 0)
     throw new Error('Empty target array is not supported.');
 

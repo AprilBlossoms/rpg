@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.2.3",
     "@types/react": "16.9.17",
     "@types/react-dom": "16.9.4",
     "immer": "5.1.0",

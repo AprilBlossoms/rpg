@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgContainer from './SvgContainer';
 import * as Head from './Head';
 import * as Eyes from './Eyes';
 import * as Mouth from './Mouth';
@@ -9,57 +8,46 @@ interface HasLife {
   hp: number;
   maxHp: number;
 }
-interface PlayerProps {
-  character: HasLife;
-  size: number;
-}
 
-export default function CharacterFace({ size, character }: PlayerProps) {
+interface CharacterFaceProps {
+  character: HasLife;
+}
+export default function CharacterFace({ character }: CharacterFaceProps) {
   switch (getMood(character)) {
     case 'Super':
       return (
-        <SvgContainer size={size}>
-          <Head.Circular fill="green">
-            <Eyes.Beady color="black" />
-            <Mouth.Excited stroke="black" fill="white" />
-          </Head.Circular>
-        </SvgContainer>
+        <Head.Circular fill="green">
+          <Eyes.Beady color="black" />
+          <Mouth.Excited stroke="black" fill="white" />
+        </Head.Circular>
       );
     case 'Happy':
       return (
-        <SvgContainer size={size}>
-          <Head.Circular fill="olive">
-            <Eyes.Beady color="black" />
-            <Mouth.Smile stroke="black" />
-          </Head.Circular>
-        </SvgContainer>
+        <Head.Circular fill="olive">
+          <Eyes.Beady color="black" />
+          <Mouth.Smile stroke="black" />
+        </Head.Circular>
       );
     case 'Neutral':
       return (
-        <SvgContainer size={size}>
-          <Head.Circular fill="yellow">
-            <Eyes.Beady color="black" />
-            <Mouth.Thinned stroke="black" />
-          </Head.Circular>
-        </SvgContainer>
+        <Head.Circular fill="yellow">
+          <Eyes.Beady color="black" />
+          <Mouth.Thinned stroke="black" />
+        </Head.Circular>
       );
     case 'Angry':
       return (
-        <SvgContainer size={size}>
-          <Head.Circular fill="red">
-            <Eyes.Narrowed color="black" />
-            <Mouth.Downturned stroke="black" />
-          </Head.Circular>
-        </SvgContainer>
+        <Head.Circular fill="red">
+          <Eyes.Narrowed color="black" />
+          <Mouth.Downturned stroke="black" />
+        </Head.Circular>
       );
     case 'Dead':
       return (
-        <SvgContainer size={size}>
-          <Head.Circular>
-            <Eyes.Vacant color="black" />
-            <Mouth.Scared stroke="black" />
-          </Head.Circular>
-        </SvgContainer>
+        <Head.Circular>
+          <Eyes.Vacant color="black" />
+          <Mouth.Scared stroke="black" />
+        </Head.Circular>
       );
   }
 }

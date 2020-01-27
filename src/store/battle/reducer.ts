@@ -1,12 +1,7 @@
-import { createReducer, createAction } from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 import d, { roll } from 'utility/dice';
 import { Action, ActionResult } from './types/action';
 import { BattleState } from './types/state';
-import {
-  PlayerCharacter,
-  NonPlayerCharacter,
-  Character
-} from './types/character';
 
 import {
   initialize,

@@ -17,14 +17,15 @@ export default function CharacterSprite({
   switch (character.type) {
     case 'NPC':
       const EnemyComponent = enemy[character.class];
+
       return (
         <SvgContainer size={size}>
           <EnemyComponent character={character} />
         </SvgContainer>
       );
-      break;
     case 'PC':
       const PlayerComponent = player[character.class];
+
       return (
         <SvgContainer size={size}>
           <PlayerComponent character={character} />

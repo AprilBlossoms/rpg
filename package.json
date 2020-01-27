@@ -4,6 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "license": "mit",
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.3",
     "@types/react": "16.9.17",

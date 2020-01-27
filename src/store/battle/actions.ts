@@ -1,12 +1,6 @@
-import { createReducer, createAction } from '@reduxjs/toolkit';
-import d, { roll } from 'utility/dice';
-import { Action, ActionResult } from './types/action';
-import { BattleState } from './types/state';
-import {
-  PlayerCharacter,
-  NonPlayerCharacter,
-  Character
-} from './types/character';
+import { createAction } from '@reduxjs/toolkit';
+import { Action } from './types/action';
+import { Character } from './types/character';
 
 export const initialize = createAction<{ characters: Character[] }>(
   'battle/initialize'

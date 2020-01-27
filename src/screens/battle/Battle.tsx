@@ -3,27 +3,34 @@ import {
   PlayerCharacter,
   NonPlayerCharacter
 } from 'store/battle/types/character';
+import CharacterSprite from 'assets/CharacterSprite';
 
 interface BattleProps {
   players: PlayerCharacter[];
   enemies: NonPlayerCharacter[];
 }
 export default function Battle({ players, enemies }: BattleProps) {
-  return (
-    <div>
-      <h1>Players</h1>
-      <ul>
-        {players.map(p => (
-          <li>{p.name}</li>
-        ))}
-      </ul>
+  const spriteSize = 145;
 
-      <h1>Enemies</h1>
-      <ul>
-        {enemies.map(e => (
-          <li>{e.name}</li>
+  return (
+    <div style={{ clear: 'both' }}>
+      <div style={{ padding: 0, margin: 0, float: 'left' }}>
+        {players.map(player => (
+          <div>
+            <CharacterSprite character={player} size={spriteSize} />
+            <div style={{ textAlign: 'center' }}>{player.name}</div>
+          </div>
         ))}
-      </ul>
+      </div>
+
+      <div style={{ padding: 0, margin: 0, float: 'right' }}>
+        {enemies.map(enemy => (
+          <div>
+            <CharacterSprite character={enemy} size={spriteSize} />
+            <div style={{ textAlign: 'center' }}>{enemy.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

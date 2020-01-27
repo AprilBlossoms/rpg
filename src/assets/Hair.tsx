@@ -15,7 +15,7 @@ export function Spikey({ stroke = 'black', fill = 'black' }: HairProps) {
          l 5 -15 l 5 15 
          L 50 0 l 8 20
          l 5 -15 l 5 15 
-         l 12 -10 Q 90 55 80 40 
+         l 12 -10 Q 90 25 80 40 
          q -30 -20 -60 0
          Z"
     />

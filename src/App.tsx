@@ -15,7 +15,7 @@ export default function App() {
   useEffect(() => {
     beginBattle(dispatch);
     setBattling(true);
-  }, [beginBattle]);
+  }, [dispatch]);
 
   return <div id="AppContainer">{battling && <BattleContainer />}</div>;
 }
